@@ -30,8 +30,8 @@ const MainLayout = () => {
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
           <h2 className="text-white fs-5 text-center py-3 mb-0">
-            <span className="sm-logo">DC</span>
-            <span className="lg-logo">Dev Corner</span>
+            <span className="sm-logo">--</span>
+            <span className="lg-logo">IPOJI</span>
           </h2>
         </div>
         <Menu
@@ -61,7 +61,7 @@ const MainLayout = () => {
               label: "Catalog",
               children: [
                 {
-                  key: "product",
+                  key: "coba",
                   icon: <AiOutlineShoppingCart className="fs-4" />,
                   label: "Add Product",
                 },
@@ -70,91 +70,12 @@ const MainLayout = () => {
                   icon: <AiOutlineShoppingCart className="fs-4" />,
                   label: "Product List",
                 },
-                {
-                  key: "brand",
-                  icon: <SiBrandfolder className="fs-4" />,
-                  label: "Brand",
-                },
-                {
-                  key: "list-brand",
-                  icon: <SiBrandfolder className="fs-4" />,
-                  label: "Brand List ",
-                },
-                {
-                  key: "category",
-                  icon: <BiCategoryAlt className="fs-4" />,
-                  label: "Category",
-                },
-                {
-                  key: "list-category",
-                  icon: <BiCategoryAlt className="fs-4" />,
-                  label: "Category List",
-                },
-                {
-                  key: "color",
-                  icon: <AiOutlineBgColors className="fs-4" />,
-                  label: "Color",
-                },
-                {
-                  key: "list-color",
-                  icon: <AiOutlineBgColors className="fs-4" />,
-                  label: "Color List",
-                },
               ],
             },
             {
               key: "orders",
               icon: <FaClipboardList className="fs-4" />,
               label: "Orders",
-            },
-            {
-              key: "marketing",
-              icon: <RiCouponLine className="fs-4" />,
-              label: "Marketing",
-              children: [
-                {
-                  key: "coupon",
-                  icon: <ImBlog className="fs-4" />,
-                  label: "Add Coupon",
-                },
-                {
-                  key: "coupon-list",
-                  icon: <RiCouponLine className="fs-4" />,
-                  label: "Coupon List",
-                },
-              ],
-            },
-            {
-              key: "blogs",
-              icon: <FaBloggerB className="fs-4" />,
-              label: "Blogs",
-              children: [
-                {
-                  key: "blog",
-                  icon: <ImBlog className="fs-4" />,
-                  label: "Add Blog",
-                },
-                {
-                  key: "blog-list",
-                  icon: <FaBloggerB className="fs-4" />,
-                  label: "Blog List",
-                },
-                {
-                  key: "blog-category",
-                  icon: <ImBlog className="fs-4" />,
-                  label: "Add Blog Category",
-                },
-                {
-                  key: "blog-category-list",
-                  icon: <FaBloggerB className="fs-4" />,
-                  label: "Blog Category List",
-                },
-              ],
-            },
-            {
-              key: "enquiries",
-              icon: <FaClipboardList className="fs-4" />,
-              label: "Enquiries",
             },
           ]}
         />
@@ -197,8 +118,8 @@ const MainLayout = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <h5 className="mb-0">Navdeep</h5>
-                <p className="mb-0">navdeepdahiya753@gmail.com</p>
+                <h5 className="mb-0">IPOJI</h5>
+                <p className="mb-0">IPOJI@gmail.com</p>
               </div>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
@@ -231,17 +152,17 @@ const MainLayout = () => {
             background: colorBgContainer,
           }}
         >
-          <ToastContainer
-            position="top-right"
-            autoClose={250}
-            hideProgressBar={false}
-            newestOnTop={true}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            theme="light"
-          />
+            <ToastContainer
+              position="top-right"
+              autoClose={250}
+              hideProgressBar={false}
+              newestOnTop={true}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              theme="light"
+            />
           <Outlet />
         </Content>
       </Layout>

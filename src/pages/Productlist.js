@@ -83,27 +83,27 @@ const ProductList = () => {
       key: "id_produk",
     },
     {
-      title: "Product Name",
+      title: "Produk",
       dataIndex: "nama_produk",
       key: "nama_produk",
     },
     {
-      title: "Price",
+      title: "Harga",
       dataIndex: "harga_produk",
       key: "harga_produk",
     },
     {
-      title: "Description",
+      title: "Deskripsi",
       dataIndex: "deskripsi_produk",
       key: "deskripsi_produk",
     },
     {
-      title: "Stock Available",
+      title: "Stock",
       dataIndex: "stok_tersedia",
       key: "stok_tersedia",
     },
     {
-      title: "Weight",
+      title: "Berat",
       dataIndex: "berat_produk",
       key: "berat_produk",
     },

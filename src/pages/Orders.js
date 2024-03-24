@@ -7,28 +7,28 @@ import { Link } from "react-router-dom";
 import { getOrders } from "../features/auth/authSlice";
 const columns = [
   {
-    title: "SNo",
+    title: "No",
     dataIndex: "key",
   },
   {
-    title: "Name",
+    title: "Nama",
     dataIndex: "name",
   },
   {
-    title: "Product",
+    title: "Produk",
     dataIndex: "product",
   },
   {
-    title: "Amount",
+    title: "Jumlah",
     dataIndex: "amount",
   },
   {
-    title: "Date",
+    title: "Tanggal",
     dataIndex: "date",
   },
 
   {
-    title: "Action",
+    title: "Aksi",
     dataIndex: "action",
   },
 ];

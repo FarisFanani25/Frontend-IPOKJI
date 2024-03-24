@@ -81,7 +81,7 @@ const AddProductForm = ({ fetchProducts }) => {
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit" loading={loading}>
-          Add Product
+          Tambahkan Produk
         </Button>
       </Form.Item>
     </Form>
