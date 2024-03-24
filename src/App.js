@@ -16,13 +16,13 @@ import Productlist from "./pages/Productlist";
 // import Addblog from "./pages/Addblog";
 // import Addblogcat from "./pages/Addblogcat";
 import Addcat from "./pages/Addcat";
-// import Addbrand from "./pages/Addbrand";
-// import Addproduct from "./pages/Addproduct";
-// import Couponlist from "./pages/Couponlist";
+import Addbrand from "./pages/Addbrand";
+import Addproduct from "./pages/Addproduct";
+import Couponlist from "./pages/Couponlist";
 import AddCoupon from "./pages/AddCoupon";
 import ViewEnq from "./pages/ViewEnq";
 import ViewOrder from "./pages/ViewOrder";
-import Coba from "./pages/Coba";
+import Produk from "./pages/Produk";
 
 function App() {
   return (
@@ -33,13 +33,12 @@ function App() {
         <Route path="/forgot-password" element={<Forgotpassword />} />
         <Route path="/admin" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="coba" element={<Coba />} />
-          {/* <Route path="enquiries" element={<Enquiries />} />
-          <Route path="enquiries/:id" element={<ViewEnq />} /> */}
-          {/* <Route path="blog-list" element={<Bloglist />} />
-          <Route path="blog" element={<Addblog />} /> */}
-          {/* <Route path="blog/:id" element={<Addblog />} /> */}
-          {/* <Route path="coupon-list" element={<Couponlist />} />
+          <Route path="enquiries" element={<Enquiries />} />
+          <Route path="enquiries/:id" element={<ViewEnq />} />
+          <Route path="blog-list" element={<Bloglist />} />
+          <Route path="blog" element={<Addblog />} />
+          <Route path="blog/:id" element={<Addblog />} />
+          <Route path="coupon-list" element={<Couponlist />} />
           <Route path="coupon" element={<AddCoupon />} />
           <Route path="coupon/:id" element={<AddCoupon />} /> */}
           {/* <Route path="blog-category-list" element={<Blogcatlist />} />
