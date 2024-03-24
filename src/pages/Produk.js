@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, Input, Button, message } from "antd";
+import { Form, Input, Button, message, Upload } from "antd";
+import { UploadOutlined } from '@ant-design/icons';
 import axios from "axios";
 
 const AddProductForm = ({ fetchProducts }) => {
@@ -10,19 +11,27 @@ const AddProductForm = ({ fetchProducts }) => {
     setLoading(true);
     axios
       .post("http://localhost:8080/create/produk", values)
-      .then(() => {
+      .then((response) => {
+        console.log(response.data); // Print server response
         message.success("Product added successfully.");
         form.resetFields();
         fetchProducts(); // Reload products after adding a new one
       })
       .catch((error) => {
-        console.error("Error adding product:", error);
+        console.error("Error adding product:", error.response); // Print error response
         setLoading(false);
       });
   };
 
   const onFinishFailed = (errorInfo) => {
     console.error("Failed:", errorInfo);
+  };
+
+  const normFile = (e) => {
+    if (Array.isArray(e)) {
+      return e;
+    }
+    return e && e.fileList;
   };
 
   return (
@@ -70,6 +79,8 @@ const AddProductForm = ({ fetchProducts }) => {
       <Form.Item
         label="Image"
         name="gambar_produk"
+        valuePropName="fileList"
+        getValueFromEvent={normFile}
         rules={[
           {
             required: true,
@@ -77,7 +88,9 @@ const AddProductForm = ({ fetchProducts }) => {
           },
         ]}
       >
-        <Input type="file" />
+        <Upload name="logo" action="/upload.do" listType="picture">
+          <Button icon={<UploadOutlined />}>Click to upload</Button>
+        </Upload>
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit" loading={loading}>
